@@ -40,7 +40,7 @@ E.2 - NetEventHandlers on the Server should use `RegisterServerEvent`
 > a resource)
 
 E.3 - Always use the optional callback argument for RegisterNetEvent
-> Increased readability and more concise 
+> Increased readability and more concise
 ```lua
 -- Good
 RegisterNetEvent('netEvent', handlerFunc)
@@ -75,8 +75,8 @@ function MyGlobalFunction()  end
 ```
 
 ## Misc
-M.1 - Never use Citizen prefix for the `Citizen` table of functions
-> The citizen table functions are all aliased to work to remove the prefix. This
+M.1 - Where possible, avoid using the Citizen prefix for the `Citizen` table of functions
+> The most commonly used citizen table functions are aliased to work with removing the prefix. This
 > appears more concise.
 ```lua
 -- Bad
@@ -84,4 +84,11 @@ Citizen.CreateThread(fn)
 
 -- Good
 CreateThread(fn)
+```
+> List of aliased functions:
+```lua
+SetTimeout
+Wait
+CreateThread
+RconPrint -- Citizen.Trace
 ```
