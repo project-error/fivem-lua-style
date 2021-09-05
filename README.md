@@ -69,7 +69,7 @@ local function myLocalFunction()  end
 
 C.3 - Global variables or functions should use upper camelcase
 ```lua
-local MyGlobalVar = 'nice'
+MyGlobalVar = 'nice'
 
 function MyGlobalFunction()  end
 ```
